@@ -1,7 +1,10 @@
 
 def mean(num_list):
-    sum = 0
+    if len(num_list) == 0:
+        raise ValueError("Illegal empty list")
+        pass
+    total = 0
     for number in num_list:
-        sum += number
-    sum /= len(num_list)
-    return sum
+        total += number
+    total /= len(num_list)
+    return total
