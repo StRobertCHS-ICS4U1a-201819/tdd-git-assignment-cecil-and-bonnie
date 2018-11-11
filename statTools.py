@@ -14,6 +14,9 @@ def mean(num_list):
 
 
 def mode(num_list):
+    if len(num_list) == 0:
+        raise ValueError("Illegal empty list")
+        pass
     num_list.sort()
     current_num = num_list[0]
     current_count = 0

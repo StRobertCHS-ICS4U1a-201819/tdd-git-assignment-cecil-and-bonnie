@@ -40,3 +40,9 @@ def test_mode_basic2():
 
 def test_mode_onlyZeroes():
     assert(mode([0, 0, 0]) == 0)
+
+
+def test_mode_emptyList():
+    with pytest.raises(ValueError) as errmsg:
+        mode([])
+    assert("Illegal empty list" == str(errmsg.value))
