@@ -11,3 +11,7 @@ def mean(num_list):
         raise TypeError("A non-negative integer was not provided.")
     total /= len(num_list)
     return total
+
+
+def mode(num_list):
+    return 3

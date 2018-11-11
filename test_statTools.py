@@ -28,3 +28,7 @@ def test_mean_wrongType():
 
 def test_mean_onlyZeroes():
     assert(mean([0, 0, 0, 0]) == 0)
+
+
+def test_mode_basic1():
+    assert(mode([1, 2, 3, 3]) == 3)
