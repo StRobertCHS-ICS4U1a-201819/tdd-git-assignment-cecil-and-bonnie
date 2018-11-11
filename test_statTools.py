@@ -113,3 +113,6 @@ def test_lowerQuartile_lessthan4elements():
     with pytest.raises(ValueError) as errmsg:
         lowerQuartile([1, 2, 3])
     assert("Less than 4 numbers when there should be more than 4." == str(errmsg.value))
+
+def test_lowerQuartile_onlyZeroes():
+    assert(lowerQuartile([0, 0, 0, 0, 0]) == 0)
