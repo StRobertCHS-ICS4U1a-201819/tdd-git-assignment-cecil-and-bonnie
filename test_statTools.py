@@ -40,3 +40,6 @@ def test_median_basic4():
     
 def test_median_conner1():
     assert(median(list_5) == 8)
+    
+def test_median_conner2():
+    assert(median(list_6) == 7.15)
