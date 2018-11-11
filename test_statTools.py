@@ -36,3 +36,7 @@ def test_mode_basic1():
 
 def test_mode_basic2():
     assert(mode([5, 2, 3, 4, 5]) == 5)
+
+
+def test_mode_onlyZeroes():
+    assert(mode([0, 0, 0]) == 0)
