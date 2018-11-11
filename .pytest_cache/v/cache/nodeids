@@ -1,4 +1,5 @@
 [
   "test_statTools.py::test_median_basic1",
-  "test_statTools.py::test_median_basic2"
+  "test_statTools.py::test_median_basic2",
+  "test_statTools.py::test_median_basic3"
 ]
