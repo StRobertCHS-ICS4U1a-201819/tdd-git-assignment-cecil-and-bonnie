@@ -72,5 +72,5 @@ def test_stat_range_basic2():
 
 def test_stat_range_emptyList():
     with pytest.raises(ValueError) as errmsg:
-        mode([])
+        stat_range([])
     assert("Illegal empty list" == str(errmsg.value))

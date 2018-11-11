@@ -56,6 +56,10 @@ def mode(num_list):
 
 
 def stat_range(num_list):
-    lowest_num = min(num_list)
-    highest_num = max(num_list)
+    if len(num_list) == 0:
+        raise ValueError("Illegal empty list")
+        pass
+    num_list.sort()
+    lowest_num = num_list[0]
+    highest_num = num_list[len(num_list) - 1]
     return highest_num - lowest_num
