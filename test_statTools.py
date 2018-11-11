@@ -98,3 +98,7 @@ def test_stat_range_oneElement():
 
 def test_lowerQuartile_basic1():
     assert(lowerQuartile([1, 2, 3, 4, 5, 6, 7]) == 2)
+
+
+def test_lowerQuartile_basic2():
+    assert(lowerQuartile([2, 3, 4, 4, 6, 7, 7, 7, 8, 8, 9, 10]) == 4)

@@ -1,3 +1,4 @@
+import math
 
 def mean(num_list):
     if len(num_list) == 0:
@@ -72,4 +73,11 @@ def stat_range(num_list):
 
 
 def lowerQuartile(num_list):
-    return 2
+    num_list.sort()
+    q1_position = len(num_list) / 4
+    if type(q1_position) is float:
+        q1_position = math.ceil(q1_position) - 1
+        return num_list[q1_position]
+
+    elif type(q1_position) is int:
+        return (num_list[q1_position] + num_list[q1_position + 1]) / 2
