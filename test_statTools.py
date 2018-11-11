@@ -78,7 +78,7 @@ def test_stat_range_emptyList():
 
 def test_stat_range_wrongType():
     with pytest.raises(TypeError) as errmsg:
-        stat_range(["Space is infinite, but the stars are finite"])
+        stat_range(["Space is infinite", "but the stars are finite"])
     assert("An integer or float was not provided." == str(errmsg.value))
 
 
@@ -88,3 +88,8 @@ def test_stat_range_negativeNumbers():
 
 def test_stat_range_onlyZeroes():
     assert(stat_range([0, 0, 0, 0, 0]) == 0)
+
+def test_stat_range_oneElement():
+    with pytest.raises(ValueError) as errmsg:
+        stat_range([1])
+    assert("Only one element in list when there should be two or more." == str(errmsg.value))

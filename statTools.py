@@ -59,6 +59,9 @@ def stat_range(num_list):
     if len(num_list) == 0:
         raise ValueError("Illegal empty list")
         pass
+    elif len(num_list) == 1:
+        raise ValueError("Only one element in list when there should be two or more.")
+        pass
     try:
         num_list.sort()
         lowest_num = num_list[0]
