@@ -23,7 +23,7 @@ def test_mean_emptyList():
 def test_mean_wrongType():
     with pytest.raises(TypeError) as errmsg:
         mean([1, 2, "Banana Bread", 4, 5])
-    assert("A non-negative integer was not provided." == str(errmsg.value))
+    assert("A number was not provided." == str(errmsg.value))
 
 
 def test_mean_onlyZeroes():
@@ -46,3 +46,8 @@ def test_mode_emptyList():
     with pytest.raises(ValueError) as errmsg:
         mode([])
     assert("Illegal empty list" == str(errmsg.value))
+
+def test_mode_wrongType():
+    with pytest.raises(TypeError) as errmsg:
+        mode(["Is", "this", "the", "Krusty", "Krab?"])
+    assert("An integer was not provided." == str(errmsg.value))

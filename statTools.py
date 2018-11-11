@@ -8,7 +8,7 @@ def mean(num_list):
         for number in num_list:
             total += number
     except TypeError:
-        raise TypeError("A non-negative integer was not provided.")
+        raise TypeError("A number was not provided.")
     total /= len(num_list)
     return total
 
@@ -23,6 +23,9 @@ def mode(num_list):
     highest_count = 0
     highest_number = num_list[0]
     for number in num_list:
+        if type(number) != int:
+            raise TypeError("An integer was not provided.")
+            pass
         if current_num == number:
             current_count += 1
         else:
