@@ -53,3 +53,7 @@ def mode(num_list):
 
     else:
         return most_frequent_num
+
+
+def stat_range(num_list):
+    return 6

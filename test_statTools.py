@@ -59,3 +59,7 @@ def test_mode_multipleAnswers():
 
 def test_mode_equalOccurances():
     assert(mode([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5])
+
+
+def test_stat_range_basic1():
+    assert(stat_range([1, 2, 7]) == 6)
