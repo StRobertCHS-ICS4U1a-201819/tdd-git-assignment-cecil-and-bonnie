@@ -55,3 +55,7 @@ def test_mode_wrongType():
 
 def test_mode_multipleAnswers():
     assert(mode([1, 1, 2, 3, 3]) == [1, 3])
+
+
+def test_mode_equalOccurances():
+    assert(mode([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5])

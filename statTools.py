@@ -33,15 +33,16 @@ def mode(num_list):
             current_count += 1
             if highest_count < current_count:
                 highest_count = current_count
-            if count == len(num_list) - 1:
-                unique_numbers.append(current_num)
-                num_frequency.append(current_count)
 
         elif current_num != num_list[count]:
             unique_numbers.append(current_num)
             num_frequency.append(current_count)
             current_num = num_list[count]
             current_count = 1
+
+        if count == len(num_list) - 1:
+            unique_numbers.append(current_num)
+            num_frequency.append(current_count)
 
     for counter in range(len(unique_numbers)):
         if num_frequency[counter] == highest_count:
