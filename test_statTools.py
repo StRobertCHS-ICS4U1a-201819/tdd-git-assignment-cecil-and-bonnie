@@ -34,3 +34,6 @@ def test_median_basic2():
     
 def test_median_basic3():
     assert(median(list_3) == 3)
+    
+def test_median_basic4():
+    assert(median(list_4) == 0)
