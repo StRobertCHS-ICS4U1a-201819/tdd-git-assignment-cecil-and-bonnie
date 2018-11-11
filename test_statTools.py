@@ -32,3 +32,7 @@ def test_mean_onlyZeroes():
 
 def test_mode_basic1():
     assert(mode([1, 2, 3, 3]) == 3)
+
+
+def test_mode_basic2():
+    assert(mode([5, 2, 3, 4, 5]) == 5)

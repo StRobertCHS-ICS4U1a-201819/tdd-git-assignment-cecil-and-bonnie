@@ -14,4 +14,18 @@ def mean(num_list):
 
 
 def mode(num_list):
-    return 3
+    num_list.sort()
+    current_num = num_list[0]
+    current_count = 0
+    highest_count = 0
+    highest_number = num_list[0]
+    for number in num_list:
+        if current_num == number:
+            current_count += 1
+        else:
+            current_num = number
+            current_count = 1
+        if current_count > highest_count:
+            highest_count = current_count
+            highest_number = number
+    return highest_number
