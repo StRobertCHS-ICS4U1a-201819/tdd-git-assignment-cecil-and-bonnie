@@ -73,6 +73,10 @@ def stat_range(num_list):
 
 
 def lowerQuartile(num_list):
+    if len(num_list) < 4:
+        raise ValueError("Less than 4 numbers when there should be more than 4.")
+        pass
+
     num_list.sort()
     q1_position = len(num_list) / 4
     for element in num_list:
@@ -81,8 +85,8 @@ def lowerQuartile(num_list):
             pass
 
     if type(q1_position) is float:
-        q1_position = math.ceil(q1_position) - 1
-        return num_list[q1_position]
+        q1_position = math.ceil(q1_position)
+        return num_list[q1_position - 1]
 
     elif type(q1_position) is int:
         return (num_list[q1_position] + num_list[q1_position + 1]) / 2
