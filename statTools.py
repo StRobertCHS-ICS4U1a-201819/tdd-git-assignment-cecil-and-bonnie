@@ -56,4 +56,6 @@ def mode(num_list):
 
 
 def stat_range(num_list):
-    return 6
+    lowest_num = min(num_list)
+    highest_num = max(num_list)
+    return highest_num - lowest_num

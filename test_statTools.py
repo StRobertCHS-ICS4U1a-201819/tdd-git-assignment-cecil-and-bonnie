@@ -47,6 +47,7 @@ def test_mode_emptyList():
         mode([])
     assert("Illegal empty list" == str(errmsg.value))
 
+
 def test_mode_wrongType():
     with pytest.raises(TypeError) as errmsg:
         mode(["Is", "this", "the", "Krusty", "Krab?"])
@@ -63,3 +64,7 @@ def test_mode_equalOccurances():
 
 def test_stat_range_basic1():
     assert(stat_range([1, 2, 7]) == 6)
+
+
+def test_stat_range_basic2():
+    assert(stat_range([11, 2, 1, 10]) == 10)
