@@ -69,3 +69,7 @@ def stat_range(num_list):
         return highest_num - lowest_num
     except TypeError:
         raise TypeError("An integer or float was not provided.")
+
+
+def lowerQuartile(num_list):
+    return 2

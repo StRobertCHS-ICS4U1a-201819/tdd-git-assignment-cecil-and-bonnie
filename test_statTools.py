@@ -89,7 +89,12 @@ def test_stat_range_negativeNumbers():
 def test_stat_range_onlyZeroes():
     assert(stat_range([0, 0, 0, 0, 0]) == 0)
 
+
 def test_stat_range_oneElement():
     with pytest.raises(ValueError) as errmsg:
         stat_range([1])
     assert("Only one element in list when there should be two or more." == str(errmsg.value))
+
+
+def test_lowerQuartile_basic1():
+    assert(lowerQuartile([1, 2, 3, 4, 5, 6, 7]) == 2)
