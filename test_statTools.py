@@ -50,4 +50,8 @@ def test_mode_emptyList():
 def test_mode_wrongType():
     with pytest.raises(TypeError) as errmsg:
         mode(["Is", "this", "the", "Krusty", "Krab?"])
-    assert("An integer was not provided." == str(errmsg.value))
+    assert("An integer or float was not provided." == str(errmsg.value))
+
+
+def test_mode_multipleAnswers():
+    assert(mode([1, 1, 2, 3, 3]) == [1, 3])
