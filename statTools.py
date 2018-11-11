@@ -59,7 +59,10 @@ def stat_range(num_list):
     if len(num_list) == 0:
         raise ValueError("Illegal empty list")
         pass
-    num_list.sort()
-    lowest_num = num_list[0]
-    highest_num = num_list[len(num_list) - 1]
-    return highest_num - lowest_num
+    try:
+        num_list.sort()
+        lowest_num = num_list[0]
+        highest_num = num_list[len(num_list) - 1]
+        return highest_num - lowest_num
+    except TypeError:
+        raise TypeError("An integer or float was not provided.")

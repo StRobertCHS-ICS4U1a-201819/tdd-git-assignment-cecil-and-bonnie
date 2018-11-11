@@ -74,3 +74,9 @@ def test_stat_range_emptyList():
     with pytest.raises(ValueError) as errmsg:
         stat_range([])
     assert("Illegal empty list" == str(errmsg.value))
+
+
+def test_stat_range_wrongType():
+    with pytest.raises(TypeError) as errmsg:
+        stat_range(["Space is infinite, but the stars are finite"])
+    assert("An integer or float was not provided." == str(errmsg.value))
