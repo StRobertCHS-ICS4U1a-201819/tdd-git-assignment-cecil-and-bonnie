@@ -13,17 +13,17 @@ list_3 = [3, 5, -2, -5, 7]
 #Test case 4: List of zeros
 list_4 = [0, 0, 0, 0, 0]
 
-#Connor case 1: Empty list
-list_empty = []
+#Conner case 1: List with single number
+list_5 = [8]
 
-#Conner case 2: List with single number
-list_single = [8]
+#Conner case 2: List that contains float
+list_6 = [4.5, 6.7, 8.9, 7.6]
 
-#Exception case 1: List that contains a string
-list_str = ["hello", 3, 5, 6, 7]
+#Exception case 1 Empty list
+list_7 = []
 
-#Exception case 2: List that contains float
-list_float = [4.5, 6.7, 8.9, 7.6]
+#Exception case 2: List that contains a string
+list_8 = ["hello", 3, 5, 6, 7]
 
 
 def test_median_basic1():
@@ -37,3 +37,6 @@ def test_median_basic3():
     
 def test_median_basic4():
     assert(median(list_4) == 0)
+    
+def test_median_conner1():
+    assert(median(list_5) == 8)
