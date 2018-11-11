@@ -75,6 +75,11 @@ def stat_range(num_list):
 def lowerQuartile(num_list):
     num_list.sort()
     q1_position = len(num_list) / 4
+    for element in num_list:
+        if type(element) is not float and type(element) is not int:
+            raise TypeError("An integer or float was not provided.")
+            pass
+
     if type(q1_position) is float:
         q1_position = math.ceil(q1_position) - 1
         return num_list[q1_position]

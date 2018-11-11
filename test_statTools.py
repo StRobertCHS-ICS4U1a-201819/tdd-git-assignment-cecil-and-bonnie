@@ -102,3 +102,9 @@ def test_lowerQuartile_basic1():
 
 def test_lowerQuartile_basic2():
     assert(lowerQuartile([2, 3, 4, 4, 6, 7, 7, 7, 8, 8, 9, 10]) == 4)
+
+
+def test_lowerQuartile_wrongType():
+    with pytest.raises(TypeError) as errmsg:
+        lowerQuartile(["Just", "let", "it", "go"])
+    assert("An integer or float was not provided." == str(errmsg.value))
