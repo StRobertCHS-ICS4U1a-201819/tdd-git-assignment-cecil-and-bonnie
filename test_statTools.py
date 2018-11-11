@@ -80,3 +80,7 @@ def test_stat_range_wrongType():
     with pytest.raises(TypeError) as errmsg:
         stat_range(["Space is infinite, but the stars are finite"])
     assert("An integer or float was not provided." == str(errmsg.value))
+
+
+def test_stat_range_negativeNumbers():
+    assert(stat_range([-10, 5, 10, 2]) == 20)
