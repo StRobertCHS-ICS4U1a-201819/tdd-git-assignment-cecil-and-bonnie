@@ -68,3 +68,9 @@ def test_stat_range_basic1():
 
 def test_stat_range_basic2():
     assert(stat_range([11, 2, 1, 10]) == 10)
+
+
+def test_stat_range_emptyList():
+    with pytest.raises(ValueError) as errmsg:
+        mode([])
+    assert("Illegal empty list" == str(errmsg.value))
