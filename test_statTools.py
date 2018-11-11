@@ -43,3 +43,14 @@ def test_median_conner1():
     
 def test_median_conner2():
     assert(median(list_6) == 7.15)
+    
+def test_median_Exception1():
+    with pytest.raises(ValueError) as errmsg:
+        median(list_7)
+    assert("Illegal empty list" == str(errmsg.value))
+    
+    
+    
+    
+    
+    

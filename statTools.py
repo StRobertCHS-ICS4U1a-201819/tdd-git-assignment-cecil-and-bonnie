@@ -1,4 +1,7 @@
 def median(num_list):
+    if len(num_list) == 0:
+        raise ValueError("Illegal empty list")
+        pass
     num_list.sort()
     if len(num_list) % 2 == 0:
         mid_1 = int(len(num_list) / 2)
