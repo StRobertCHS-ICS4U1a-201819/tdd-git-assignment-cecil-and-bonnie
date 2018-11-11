@@ -84,3 +84,7 @@ def test_stat_range_wrongType():
 
 def test_stat_range_negativeNumbers():
     assert(stat_range([-10, 5, 10, 2]) == 20)
+
+
+def test_stat_range_onlyZeroes():
+    assert(stat_range([0, 0, 0, 0, 0]) == 0)
