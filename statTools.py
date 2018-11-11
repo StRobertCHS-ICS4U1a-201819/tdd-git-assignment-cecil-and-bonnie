@@ -4,7 +4,10 @@ def mean(num_list):
         raise ValueError("Illegal empty list")
         pass
     total = 0
-    for number in num_list:
-        total += number
+    try:
+        for number in num_list:
+            total += number
+    except TypeError:
+        raise TypeError("A non-negative integer was not provided.")
     total /= len(num_list)
     return total
