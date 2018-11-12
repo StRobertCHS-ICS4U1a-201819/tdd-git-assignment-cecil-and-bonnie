@@ -57,6 +57,9 @@ def test_median_Exception2():
 def test_upr_quartile_basic1():
     assert(upr_quartile(list_1) == 6)
     
+def test_upr_quartile_basic2():
+    assert(upr_quartile(list_2) == 7)
+    
     
     
     
