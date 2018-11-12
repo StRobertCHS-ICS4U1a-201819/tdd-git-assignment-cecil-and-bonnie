@@ -118,6 +118,12 @@ def test_st_dev_basic1():
 def test_st_dev_basic2():
     assert(st_dev(list_2) == 1.97)
     
+def test_st_dev_basic3():
+    assert(st_dev(list_3) == 4.45)
+    
+def test_st_dev_basic4():
+    assert(st_dev(list_4) == 0)
+    
     
     
     
