@@ -60,6 +60,12 @@ def test_upr_quartile_basic1():
 def test_upr_quartile_basic2():
     assert(upr_quartile(list_2) == 7)
     
+def test_upr_quartile_basic3():
+    assert(upr_quartile(list_3) == 5)
+    
+def test_upr_quartile_basic4():
+    assert(upr_quartile(list_4) == 0)
+    
     
     
     
