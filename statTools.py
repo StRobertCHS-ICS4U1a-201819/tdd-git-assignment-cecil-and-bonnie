@@ -17,12 +17,16 @@ def median(num_list):
     return median
 
 def upr_quartile(num_list):
+    if len(num_list) < 4:
+        raise ValueError("List length shorter than 4")
+        pass      
     num_list.sort()
     upperhalf = num_list[len(num_list)//2:]
     if len(upperhalf) % 2 == 0 :
         return (upperhalf[len(upperhalf)//2 - 1] + upperhalf[len(upperhalf)//2]) / 2
     else :
         return upperhalf[len(upperhalf)//2]
+    
 
     
 

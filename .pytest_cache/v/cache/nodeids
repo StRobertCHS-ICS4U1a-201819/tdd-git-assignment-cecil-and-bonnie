@@ -10,5 +10,6 @@
   "test_statTools.py::test_upr_quartile_basic1",
   "test_statTools.py::test_upr_quartile_basic2",
   "test_statTools.py::test_upr_quartile_basic3",
-  "test_statTools.py::test_upr_quartile_basic4"
+  "test_statTools.py::test_upr_quartile_basic4",
+  "test_statTools.py::test_upr_quartile_conner1"
 ]
