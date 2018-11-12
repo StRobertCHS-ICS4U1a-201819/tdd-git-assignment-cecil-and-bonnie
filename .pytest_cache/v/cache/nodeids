@@ -23,5 +23,6 @@
   "test_statTools.py::test_variance_corner2",
   "test_statTools.py::test_variance_exception1",
   "test_statTools.py::test_variance_exception2",
-  "test_statTools.py::test_st_d_basic1"
+  "test_statTools.py::test_st_dev_basic1",
+  "test_statTools.py::test_st_dev_basic2"
 ]
