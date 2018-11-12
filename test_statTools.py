@@ -54,6 +54,10 @@ def test_median_Exception2():
         median(list_8)
     assert("List contain non-integer value" == str(errmsg.value))
     
+def test_upr_quartile_basic1():
+    assert(upr_quartile(list_1) == 6)
+    
+    
     
     
     

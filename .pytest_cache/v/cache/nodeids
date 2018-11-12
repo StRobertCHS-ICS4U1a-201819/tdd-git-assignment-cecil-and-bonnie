@@ -6,5 +6,6 @@
   "test_statTools.py::test_median_conner1",
   "test_statTools.py::test_median_conner2",
   "test_statTools.py::test_median_Exception1",
-  "test_statTools.py::test_median_Exception2"
+  "test_statTools.py::test_median_Exception2",
+  "test_statTools.py::test_upr_quartile_basic1"
 ]
