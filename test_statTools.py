@@ -109,10 +109,16 @@ def test_lowerQuartile_wrongType():
         lowerQuartile(["Just", "let", "it", "go"])
     assert("An integer or float was not provided." == str(errmsg.value))
 
+
 def test_lowerQuartile_lessthan4elements():
     with pytest.raises(ValueError) as errmsg:
         lowerQuartile([1, 2, 3])
     assert("Less than 4 numbers when there should be more than 4." == str(errmsg.value))
 
+
 def test_lowerQuartile_onlyZeroes():
     assert(lowerQuartile([0, 0, 0, 0, 0]) == 0)
+
+
+def test_lowerQuartile_negativeNumbers():
+    assert(lowerQuartile([-100, -10, -5, 10, 90]) == -55)

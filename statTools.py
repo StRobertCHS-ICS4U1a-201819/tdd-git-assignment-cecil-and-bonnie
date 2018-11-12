@@ -1,5 +1,3 @@
-import math
-
 def mean(num_list):
     if len(num_list) == 0:
         raise ValueError("Illegal empty list")
@@ -78,15 +76,20 @@ def lowerQuartile(num_list):
         pass
 
     num_list.sort()
-    q1_position = len(num_list) / 4
-    for element in num_list:
-        if type(element) is not float and type(element) is not int:
+    lower_half = (len(num_list) // 2)
+    lower_half_list = []
+    for element in range(len(num_list)):
+        if type(num_list[element]) is not float and type(num_list[element]) is not int:
             raise TypeError("An integer or float was not provided.")
             pass
-
-    if type(q1_position) is float:
-        q1_position = math.ceil(q1_position)
-        return num_list[q1_position - 1]
-
-    elif type(q1_position) is int:
-        return (num_list[q1_position] + num_list[q1_position + 1]) / 2
+        elif len(num_list) % 2 == 1:
+            if element < lower_half:
+                lower_half_list.append(num_list[element])
+        else:
+            if element < lower_half:
+                lower_half_list.append(num_list[element])
+    lower_half_median_position = len(lower_half_list) // 2
+    if len(lower_half_list) % 2 == 1:
+        return lower_half_list[lower_half_median_position]
+    else:
+        return (lower_half_list[lower_half_median_position] + lower_half_list[lower_half_median_position - 1]) / 2
