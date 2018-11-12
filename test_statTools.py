@@ -49,6 +49,11 @@ def test_median_Exception1():
         median(list_7)
     assert("Illegal empty list" == str(errmsg.value))
     
+def test_median_Exception2():
+    with pytest.raises(TypeError) as errmsg:
+        median(list_8)
+    assert("List contain non-integer value" == str(errmsg.value))
+    
     
     
     
