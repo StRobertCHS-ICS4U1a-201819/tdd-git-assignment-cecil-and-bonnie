@@ -96,6 +96,12 @@ def test_variance_basic3():
 def test_variance_basic4():
     assert(variance(list_4) == 0)
     
+def test_variance_basic5():
+    assert(variance(list_5) == 0)
+    
+def test_variance_basic6():
+    assert(variance(list_6) == 2.57)
+    
     
     
     

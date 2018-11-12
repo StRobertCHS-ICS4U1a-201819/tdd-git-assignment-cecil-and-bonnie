@@ -18,5 +18,7 @@
   "test_statTools.py::test_variance_basic1",
   "test_statTools.py::test_variance_basic2",
   "test_statTools.py::test_variance_basic3",
-  "test_statTools.py::test_variance_basic4"
+  "test_statTools.py::test_variance_basic4",
+  "test_statTools.py::test_variance_basic5",
+  "test_statTools.py::test_variance_basic6"
 ]
