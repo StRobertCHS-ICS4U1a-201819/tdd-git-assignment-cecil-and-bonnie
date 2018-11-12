@@ -33,7 +33,9 @@ def upr_quartile(num_list):
         return upperhalf[len(upperhalf)//2]
     
 def variance(num_list):
-    return 2.96
+    mean = sum(num_list)/len(num_list)
+    variance = sum((x_i - mean) ** 2 for x_i in num_list) / len(num_list)
+    return round(variance, 2)
     
 
     
