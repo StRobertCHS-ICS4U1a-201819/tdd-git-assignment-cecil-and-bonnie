@@ -135,6 +135,11 @@ def test_st_dev_exception1():
         st_dev(list_7)
     assert("Illegal empty list" == str(errmsg.value))
     
+def test_st_dev_exception2():
+    with pytest.raises(TypeError) as errmsg:
+        st_dev(list_8)
+    assert("List contain non-integer value" == str(errmsg.value))
+    
     
     
     
