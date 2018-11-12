@@ -112,6 +112,9 @@ def test_variance_exception2():
         variance(list_8)
     assert("List contain non-integer value" == str(errmsg.value))
     
+def test_st_d_basic1():
+    assert(st_dev(list_1) == 1.72)
+    
     
     
     

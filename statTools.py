@@ -1,3 +1,4 @@
+import math
 def median(num_list):
     if len(num_list) == 0:
         raise ValueError("Illegal empty list")
@@ -43,6 +44,26 @@ def variance(num_list):
     mean = sum(num_list)/len(num_list)
     variance = sum((x_i - mean) ** 2 for x_i in num_list) / len(num_list)
     return round(variance, 2)
+
+def st_dev(num_list):
+    mean = sum(num_list)/len(num_list)
+    std = math.sqrt(sum((x_i - mean) ** 2 for x_i in num_list) / len(num_list))
+    return round(std, 2)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
 
     
