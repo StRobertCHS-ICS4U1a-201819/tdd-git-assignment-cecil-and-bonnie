@@ -1,5 +1,11 @@
 import math
 def median(num_list):
+    """Compute median of a given list of values
+    
+    :param num_list: list   List of values to find median
+    :return median: int    Median of the given list
+        
+    """
     if len(num_list) == 0:
         raise ValueError("Illegal empty list")
         pass      
@@ -18,6 +24,11 @@ def median(num_list):
     return median
 
 def upr_quartile(num_list):
+    """Compute upper quartile of given list of values
+    
+    :param num_list: list   List of values to compute upper quartile
+    :return upr_quartile: int    Upper quartile of the list
+    """
     for count in range(len(num_list)):
         if not(type(num_list[count]) is int or type(num_list[count]) is float):
             raise TypeError("List contain non-integer value")
@@ -34,6 +45,11 @@ def upr_quartile(num_list):
         return upperhalf[len(upperhalf)//2]
     
 def variance(num_list):
+    """Compute variance of given list of values
+    
+    :param num_list: list   List of values to compute variance
+    :return median: float    Variance of the list
+    """
     if len(num_list) == 0:
         raise ValueError("Illegal empty list")
         pass    
@@ -46,6 +62,11 @@ def variance(num_list):
     return round(variance, 2)
 
 def st_dev(num_list):
+    """Compute standard deviation of given list of values
+    
+    :param num_list: list   List of values to compute standard deviation
+    :return median: float    Standard deviation of the list
+    """    
     if len(num_list) == 0:
         raise ValueError("Illegal empty list")
         pass 
