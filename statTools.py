@@ -17,6 +17,11 @@ def median(num_list):
     return median
 
 def upr_quartile(num_list):
+    for count in range(len(num_list)):
+        if not(type(num_list[count]) is int or type(num_list[count]) is float):
+            raise TypeError("List contain non-integer value")
+            pass
+    num_list.sort()
     if len(num_list) < 4:
         raise ValueError("List length shorter than 4")
         pass      

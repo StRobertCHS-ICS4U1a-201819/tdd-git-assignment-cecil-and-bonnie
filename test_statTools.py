@@ -74,6 +74,17 @@ def test_upr_quartile_exception1():
         upr_quartile(list_5)
     assert("List length shorter than 4" == str(errmsg.value))
     
+def test_upr_quartile_exception2():
+    with pytest.raises(ValueError) as errmsg:
+        upr_quartile(list_7)
+    assert("List length shorter than 4" == str(errmsg.value))
+    
+def test_upr_quartile_exception3():
+    with pytest.raises(TypeError) as errmsg:
+        upr_quartile(list_8)
+    assert("List contain non-integer value" == str(errmsg.value))
+    
+    
     
     
     
