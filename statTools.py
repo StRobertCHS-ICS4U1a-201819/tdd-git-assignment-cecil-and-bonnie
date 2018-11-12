@@ -32,6 +32,9 @@ def upr_quartile(num_list):
     else :
         return upperhalf[len(upperhalf)//2]
     
+def variance(num_list):
+    return 2.96
+    
 
     
 

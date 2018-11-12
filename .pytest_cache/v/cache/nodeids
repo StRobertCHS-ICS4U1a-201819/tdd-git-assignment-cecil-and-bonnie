@@ -14,5 +14,6 @@
   "test_statTools.py::test_upr_quartile_conner1",
   "test_statTools.py::test_upr_quartile_exception1",
   "test_statTools.py::test_upr_quartile_exception2",
-  "test_statTools.py::test_upr_quartile_exception3"
+  "test_statTools.py::test_upr_quartile_exception3",
+  "test_statTools.py::test_variance_basic1"
 ]

@@ -83,6 +83,9 @@ def test_upr_quartile_exception3():
     with pytest.raises(TypeError) as errmsg:
         upr_quartile(list_8)
     assert("List contain non-integer value" == str(errmsg.value))
+
+def test_variance_basic1():
+    assert(variance(list_1) == 2.96)
     
     
     
