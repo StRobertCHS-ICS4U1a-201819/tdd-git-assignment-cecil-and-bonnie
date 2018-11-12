@@ -11,6 +11,7 @@ Created:	11/11/2018
 """
 import math
 
+
 def mean(num_list):
     """ Calculate the average of a given list of numbers
       :param num_list: list The list of numbers needed to calculate the mean

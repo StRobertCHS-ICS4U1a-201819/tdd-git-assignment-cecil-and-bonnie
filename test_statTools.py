@@ -13,28 +13,28 @@ Created:	11/11/2018
 import pytest
 from statTools import *
 
-#Test case 1: Odd number of length
+# Test case 1: Odd number of length
 list_1 = [2, 5, 7, 4, 6]
 
-#Test case 2: Even number of length
+# Test case 2: Even number of length
 list_2 = [9, 3, 5, 7, 4, 6]
 
-#Test case 3: list with negatives
+# Test case 3: list with negatives
 list_3 = [3, 5, -2, -5, 7]
 
-#Test case 4: List of zeros
+# Test case 4: List of zeros
 list_4 = [0, 0, 0, 0, 0]
 
-#Conner case 1: List with single number
+# Conner case 1: List with single number
 list_5 = [8]
 
-#Conner case 2: List that contains float
+# Conner case 2: List that contains float
 list_6 = [4.5, 6.7, 8.9, 7.6]
 
-#Exception case 1 Empty list
+# Exception case 1 Empty list
 list_7 = []
 
-#Exception case 2: List that contains a string
+# Exception case 2: List that contains a string
 list_8 = ["hello", 3, 5, 6, 7]
 
 # Corner Case: Tests to see if the mean function can properly output through taking in 1 number
