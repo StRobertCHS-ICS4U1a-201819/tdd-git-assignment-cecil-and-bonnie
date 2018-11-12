@@ -86,6 +86,15 @@ def test_upr_quartile_exception3():
 
 def test_variance_basic1():
     assert(variance(list_1) == 2.96)
+
+def test_variance_basic2():
+    assert(variance(list_2) == 3.89)
+    
+def test_variance_basic3():
+    assert(variance(list_3) == 19.84)
+    
+def test_variance_basic4():
+    assert(variance(list_4) == 0)
     
     
     
