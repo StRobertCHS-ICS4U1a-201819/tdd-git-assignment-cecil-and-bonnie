@@ -107,6 +107,11 @@ def test_variance_exception1():
         variance(list_7)
     assert("Illegal empty list" == str(errmsg.value))
     
+def test_variance_exception2():
+    with pytest.raises(TypeError) as errmsg:
+        variance(list_8)
+    assert("List contain non-integer value" == str(errmsg.value))
+    
     
     
     

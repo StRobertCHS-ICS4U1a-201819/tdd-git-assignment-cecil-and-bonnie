@@ -35,7 +35,11 @@ def upr_quartile(num_list):
 def variance(num_list):
     if len(num_list) == 0:
         raise ValueError("Illegal empty list")
-        pass      
+        pass    
+    for count in range(len(num_list)):
+        if not(type(num_list[count]) is int or type(num_list[count]) is float):
+            raise TypeError("List contain non-integer value")
+            pass
     mean = sum(num_list)/len(num_list)
     variance = sum((x_i - mean) ** 2 for x_i in num_list) / len(num_list)
     return round(variance, 2)
