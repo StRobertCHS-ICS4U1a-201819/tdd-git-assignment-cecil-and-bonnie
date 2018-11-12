@@ -70,8 +70,8 @@ def test_upr_quartile_conner1():
     assert(upr_quartile(list_6) == 8.25)
     
 def test_upr_quartile_exception1():
-    with pytest.raises(TypeError) as errmsg:
-        median(list_8)
+    with pytest.raises(ValueError) as errmsg:
+        upr_quartile(list_5)
     assert("List length shorter than 4" == str(errmsg.value))
     
     
