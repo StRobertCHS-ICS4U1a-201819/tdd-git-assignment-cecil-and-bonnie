@@ -96,11 +96,16 @@ def test_variance_basic3():
 def test_variance_basic4():
     assert(variance(list_4) == 0)
     
-def test_variance_basic5():
+def test_variance_corner1():
     assert(variance(list_5) == 0)
     
-def test_variance_basic6():
+def test_variance_corner2():
     assert(variance(list_6) == 2.57)
+    
+def test_variance_exception1():
+    with pytest.raises(ValueError) as errmsg:
+        variance(list_7)
+    assert("Illegal empty list" == str(errmsg.value))
     
     
     
