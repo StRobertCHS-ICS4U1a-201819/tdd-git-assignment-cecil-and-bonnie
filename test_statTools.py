@@ -124,6 +124,9 @@ def test_st_dev_basic3():
 def test_st_dev_basic4():
     assert(st_dev(list_4) == 0)
     
+def test_st_dev_corner1():
+    assert(st_dev(list_6) == 1.60)
+    
     
     
     
