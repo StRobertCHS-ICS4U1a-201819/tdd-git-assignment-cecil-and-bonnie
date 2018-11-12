@@ -27,5 +27,7 @@
   "test_statTools.py::test_st_dev_basic2",
   "test_statTools.py::test_st_dev_basic3",
   "test_statTools.py::test_st_dev_basic4",
-  "test_statTools.py::test_st_dev_corner1"
+  "test_statTools.py::test_st_dev_corner1",
+  "test_statTools.py::test_st_dev_corner2",
+  "test_statTools.py::test_st_dev_exception1"
 ]

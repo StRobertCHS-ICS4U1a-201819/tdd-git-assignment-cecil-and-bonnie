@@ -127,6 +127,15 @@ def test_st_dev_basic4():
 def test_st_dev_corner1():
     assert(st_dev(list_6) == 1.60)
     
+def test_st_dev_corner2():
+    assert(st_dev(list_5) == 0)
+    
+def test_st_dev_exception1():
+    with pytest.raises(ValueError) as errmsg:
+        st_dev(list_7)
+    assert("Illegal empty list" == str(errmsg.value))
+    
+    
     
     
     
