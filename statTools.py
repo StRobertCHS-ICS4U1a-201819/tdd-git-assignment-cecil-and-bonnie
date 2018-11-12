@@ -13,11 +13,14 @@ def median(num_list):
         if not(type(num_list[count]) is int or type(num_list[count]) is float):
             raise TypeError("List contain non-integer value")
             pass
+    #sort the list
     num_list.sort()
+    #if list length is even, find the average of the 2 middle numbers
     if len(num_list) % 2 == 0:
         mid_1 = int(len(num_list) / 2)
         mid_2 = int(len(num_list) / 2 + 1)
         median = (num_list[mid_1 - 1] + num_list[mid_2 - 1]) /2
+    #if list length is odd, find the value of the middle number
     else:
         mid = int((len(num_list) + 1) / 2)
         median = num_list[mid-1]
@@ -33,14 +36,17 @@ def upr_quartile(num_list):
         if not(type(num_list[count]) is int or type(num_list[count]) is float):
             raise TypeError("List contain non-integer value")
             pass
-    num_list.sort()
     if len(num_list) < 4:
         raise ValueError("List length shorter than 4")
-        pass      
+        pass    
+    #sort the list
     num_list.sort()
+    #find the upper half of the list
     upperhalf = num_list[len(num_list)//2:]
+    #if upperhalf length is even, find the average of the 2 middle numbers
     if len(upperhalf) % 2 == 0 :
         return (upperhalf[len(upperhalf)//2 - 1] + upperhalf[len(upperhalf)//2]) / 2
+    #if upperhalf length is odd, find the value of the middle number
     else :
         return upperhalf[len(upperhalf)//2]
     
@@ -57,7 +63,9 @@ def variance(num_list):
         if not(type(num_list[count]) is int or type(num_list[count]) is float):
             raise TypeError("List contain non-integer value")
             pass
+    #compute the mean of the data
     mean = sum(num_list)/len(num_list)
+    #compute the sum of difference between data and mean squared the divided by list length
     variance = sum((x_i - mean) ** 2 for x_i in num_list) / len(num_list)
     return round(variance, 2)
 
@@ -74,7 +82,9 @@ def st_dev(num_list):
         if not(type(num_list[count]) is int or type(num_list[count]) is float):
             raise TypeError("List contain non-integer value")
             pass
+    #compute the mean of the list
     mean = sum(num_list)/len(num_list)
+    #compute the square root of the sum of difference between data and mean squared over list length
     std = math.sqrt(sum((x_i - mean) ** 2 for x_i in num_list) / len(num_list))
     return round(std, 2)
     
